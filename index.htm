@@ -1,83 +1,40 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
-<title>ストップウォッチ</title>
-<style>
-body{font-size:34px;
-color:#efefef;
-}
+<html>
+
+	<head>
+		<title>Stopwatch</title>
+		<link rel="stylesheet" href="https://tribefactory.netlify.app/css/base1.css">
+	</head>
 
 
-.fnt{font-size:10px;}
+	<body class="fnt_c01 fnt">
+		<form onSubmit="return false;" name="stopwatch_form" class="flt_lef">
 
-.timer{
-float:left;
-font-size:150px;
-border:0px;
-font-family:'7barP'
-}
+			<div class="over_flow_no">
+				<div id="stopwatch_text" class="fnt_s150 flt_lef">0.00</div>
+				<div class="flt_lef pad_t90 fnt_s34">秒</div>
+			</div>
+			
+			<div class="tex_rig mar_b24">
+				<input type="button" name="stopwatch_button" value="開始" onClick="stopwatch_click(0);" class="h26 ver_top cur_poi">
+				<input type="button" value="RESET" onClick="stopwatch_click(1);" class="h26 ver_top cur_poi">
+			</div>
 
-.btn{width:400px;
-text-align:right;}
+			<div class="tex_rig mar_b24">
+				<label class="cur_poi"><input type="radio" name="colr" onclick="document.body.style.color='#efefef'" checked="checked"/>Grey</label>
+				<label class="cur_poi"><input type="radio" name="colr" onclick="document.body.style.color='#000000'" class="mar_l15"/>Black</label>
+			</div>
 
-.byo{float:left;
-padding-top:90px;}
+			<div class="tex_rig">
+				<span class="fnt">　<a href="https://www.trojanbear.net/s/sevenbar" class="fnt_c04" target="_blank">SEVENBARフォントDL</a></span>
+			</div>
 
-
-.colr{float:left;
-padding-top:90px;
-font-size:10px;}
-
-
-.clearfix {
-	clear: both;
-line-height:0px;
-font-size:0px;
-}
-.clearfix:after {
-	content:".";
-	display:block;
-	height:0;
-	clear:both;
-	visibility:hidden;
-}
-.clearfix {
-	display:inline-table;
-}
-/* HIDE IEmac-5 ＼*/
-* html .clearfix {height:1%;}
-*+html .clearfix {height:1%;}
-.clearfix {display:block;}
-/* */
-
-</style>
-<link rel="shortcut icon" href="img/favicon.ico">
-<script>
-
-function ccolr() {
-  document.body.style.color = stopwatch_form.colr.value;
-}
-
-</script>
-
-</head>
-
-<body>
-<script language="JavaScript" type="text/javascript" src="timer.js"></script>
-<form onSubmit="return false;" name="stopwatch_form" class="fm">
-<!--<input name="stopwatch_text" class="timer" type="text" size=11 value="0.00">-->
-
-<div id="stopwatch_text" class="timer">0.00</div><div class="byo">秒</div><div class="colr"><input type="radio" name="colr" onclick="document.body.style.color='#efefef'" checked="checked"/>灰<br />
-
-<input type="radio" name="colr" onclick="document.body.style.color='#000000'"/>黒</div>
-<div class="clearfix btn"><input type="button" name="stopwatch_button" value="開始" onClick="stopwatch_click(0);">
-
-<input type="button" value="RESET" onClick="stopwatch_click(1);">
-<span class="fnt">　　　<a href="font/7barP.TTF">fontDL</a></span>
-</div>
+		</form>
+	</body>
 
 
-</form></body>
+	<footer>
+		<script language="JavaScript" type="text/javascript" src="js/timer.js"></script>
+	</footer>
+
 </html>
                                                  

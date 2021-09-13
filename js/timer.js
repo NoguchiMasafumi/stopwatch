@@ -14,17 +14,9 @@ function setStopWatchText()
 			t = ' ' + t;
 		}
 		t = t.substr(0,t.length-2) + '.' + t.substr(t.length-2,2);
-//		document.stopwatch_form.stopwatch_text.value = t;
 		//****Ç±Ç±Ç≈ï`âÊ*****
 		document.getElementById("stopwatch_text").innerHTML = t;
 		document.title=t;
-//		if(document.stopwatch_form.stopwatch_limit_check.checked && parseInt(document.stopwatch_form.stopwatch_limit_text.value)){
-//			if(time > document.stopwatch_form.stopwatch_limit_text.value * 1000){
-//				document.stopwatch_form.stopwatch_limit_check.checked = false;
-//				window.focus();
-//				alert(document.stopwatch_form.stopwatch_limit_text.value + 'ïbåoâﬂÇµÇ‹ÇµÇΩ')
-//			}
-//		}
 	}
 
 }
