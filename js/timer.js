@@ -14,7 +14,7 @@ function setStopWatchText()
 			t = ' ' + t;
 		}
 		t = t.substr(0,t.length-2) + '.' + t.substr(t.length-2,2);
-		//****Ç±Ç±Ç≈ï`âÊ*****
+		//****„Åì„Åì„ÅßÊèèÁîª*****
 		document.getElementById("stopwatch_text").innerHTML = t;
 		document.title=t;
 	}
@@ -29,18 +29,18 @@ function stopwatch_click(id)
 {
 	if(id == 0){
 		switch(stopwatchState){
-			case 0: //í‚é~íÜ
-				document.stopwatch_form.stopwatch_button.value = 'í‚é~';
+			case 0: //ÂÅúÊ≠¢‰∏≠
+				document.stopwatch_form.stopwatch_button.value = 'ÂÅúÊ≠¢';
 				stopwatchState = 1;
 				stopwatchStartTime = new Date();
 				stopwatchTimerID = setInterval("setStopWatchText()",10);
 
 				break;
-			case 1: //ìÆçÏíÜ
+			case 1: //Âãï‰Ωú‰∏≠
 				if(stopwatchTimerID){
 					clearInterval(stopwatchTimerID);
 				}
-				document.stopwatch_form.stopwatch_button.value = 'çƒäJ';
+				document.stopwatch_form.stopwatch_button.value = 'ÂÜçÈñã';
 				stopwatchState = 0;
 				stopwatchTotal = getStopWatchTime();
 				break;
@@ -48,10 +48,11 @@ function stopwatch_click(id)
 	}else if(id == 1){
 		stopwatchStartTime = new Date();
 		if(stopwatchState == 0){
-			document.stopwatch_form.stopwatch_button.value = 'äJén';
+			document.stopwatch_form.stopwatch_button.value = 'ÈñãÂßã';
 		}
 //		document.stopwatch_form.stopwatch_text.value = '	   0.00';
 		document.getElementById("stopwatch_text").innerHTML = '0.00';
 	stopwatchTotal = 0;
 	}
 }
+
